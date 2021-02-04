@@ -1,0 +1,42 @@
+/* Colors */
+
+$coral: #FF6B64;
+$black: #2D2C2A;
+$white: #F8F8F8;
+$yellow: #FFDE07;
+$blue: #4A40FD;
+$green: #4DD6A4;
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Raleway:wght@600;900&display=swap');
+
+$fontFamily : 'Montserrat', sans-serif;
+
+@mixin first-heading {
+    font-weight: 900;
+    font-size:38px;
+    font-family: 'Raleway', sans-serif;
+}
+
+@mixin second-heading {
+    font-weight: 900;
+    font-size:26px;
+    font-family: 'Raleway', sans-serif;
+}
+
+@mixin third-heading {
+    font-weight: 600;
+    font-size:20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+@mixin highlight {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2.5px;
+}
+
+

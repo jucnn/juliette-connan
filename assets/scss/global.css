@@ -1,0 +1,36 @@
+/* Colors */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Raleway:wght@600;900&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #2D2C2A;
+  background-color: #F8F8F8;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 38px;
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 26px;
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#highlight {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2.5px;
+}
+/*# sourceMappingURL=global.css.map */

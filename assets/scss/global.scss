@@ -1,0 +1,24 @@
+@import 'variables.scss';
+
+body {
+    font-family: $fontFamily;
+    font-weight: 400;
+    color:$black;
+    background-color: $white;
+}
+
+h1 {
+    @include first-heading;
+}
+
+h2 {
+    @include second-heading;
+}
+
+h3 {
+    @include third-heading;
+}
+
+#highlight {
+    @include highlight
+}
