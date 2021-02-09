@@ -1,7 +1,7 @@
 Vue.component("contact", {
     template: `
-    <div>
+    <section class="section-black">
         <h1>Contact</h1>
-    </div>
+    </section>
     `,
 });

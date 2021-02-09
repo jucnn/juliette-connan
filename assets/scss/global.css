@@ -4,14 +4,26 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #2D2C2A;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.section-black {
+  background-color: #2D2C2A;
+  color: #F8F8F8;
+}
+
+.section-white {
   background-color: #F8F8F8;
+  color: #2D2C2A;
 }
 
 h1 {
   font-weight: 900;
   font-size: 38px;
   font-family: 'Raleway', sans-serif;
+  margin-top: 0;
 }
 
 h2 {
@@ -32,5 +44,109 @@ h3 {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 2.5px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  padding-top: 100px;
+}
+
+section {
+  padding: 90px 100px 40px 100px;
+}
+
+/* Menu */
+#menu {
+  background-color: #2D2C2A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  color: #F8F8F8;
+  padding: 0px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+}
+
+#menu nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#menu nav ul li {
+  list-style: none;
+  font-weight: 900;
+  font-size: 26px;
+  margin-left: 50px;
+}
+
+/* Home */
+#home .home_presentation p {
+  font-size: 48px;
+  font-weight: 900;
+  font-family: 'Raleway', sans-serif;
+}
+
+#home .home_presentation-dot {
+  color: #FF6B64;
+  margin-left: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#home .home_resume a {
+  color: #F8F8F8;
+}
+
+#home .home_discover {
+  margin-top: 60px;
+  text-align: center;
+}
+
+#home .home_discover #highlight {
+  font-size: 22px;
+}
+
+#home .home_discover img {
+  -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
+          animation: downarrow 0.6s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes downarrow {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0.4em);
+            transform: translateY(0.4em);
+  }
+}
+
+@keyframes downarrow {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0.4em);
+            transform: translateY(0.4em);
+  }
 }
 /*# sourceMappingURL=global.css.map */

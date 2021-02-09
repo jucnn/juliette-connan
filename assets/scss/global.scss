@@ -1,14 +1,25 @@
-@import 'variables.scss';
+@import "variables.scss";
 
 body {
     font-family: $fontFamily;
     font-weight: 400;
-    color:$black;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section-black {
+    background-color: $black;
+    color: $white;
+}
+
+.section-white {
     background-color: $white;
+    color: $black;
 }
 
 h1 {
     @include first-heading;
+    margin-top: 0;
 }
 
 h2 {
@@ -20,5 +31,92 @@ h3 {
 }
 
 #highlight {
-    @include highlight
+    @include highlight;
+}
+
+p{
+    font-size:20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+main {
+    padding-top:100px;
+}
+
+section {
+    padding:90px 100px 40px 100px;
+}
+
+/* Menu */
+
+#menu {
+    background-color: $black;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: $white;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+
+    nav ul {
+        display: flex;
+
+        li {
+            list-style: none;
+            font-weight: 900;
+            font-size: 26px;
+            margin-left: 50px;
+        }
+    }
+}
+
+/* Home */
+
+#home {
+    .home {
+        &_presentation {
+            p {
+                font-size: 48px;
+                font-weight: 900;
+                font-family: 'Raleway', sans-serif;
+            }
+
+            &-dot {
+                color:$coral;
+                margin-left: 5px;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+
+        &_resume {
+            a {
+                color:$white;
+            }
+        }
+
+        &_discover {
+            margin-top: 60px;
+            text-align: center;
+
+            #highlight {
+                font-size:22px
+            }
+
+            img {
+                animation: downarrow 0.6s infinite alternate ease-in-out;
+            }
+        }
+
+        @keyframes downarrow {
+            0% { transform: translateY(0) }
+            100% { transform: translateY(0.4em) }
+          }
+    }
 }

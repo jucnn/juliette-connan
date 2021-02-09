@@ -1,8 +1,8 @@
 Vue.component("works", {
     template: `
-    <div>
+    <section class="section-black">
         <h1>Works</h1>
         <slot></slot>
-    </div>
+    </section>
     `,
 });
