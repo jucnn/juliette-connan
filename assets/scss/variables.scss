@@ -2,6 +2,7 @@
 
 $coral: #FF6B64;
 $black: #2D2C2A;
+$grey: #403F3C;
 $white: #F8F8F8;
 $yellow: #FFDE07;
 $blue: #4A40FD;
@@ -16,6 +17,12 @@ $fontFamily : 'Montserrat', sans-serif;
 @mixin first-heading {
     font-weight: 900;
     font-size:38px;
+    font-family: 'Raleway', sans-serif;
+}
+
+@mixin subtitle {
+    font-weight: 900;
+    font-size:34px;
     font-family: 'Raleway', sans-serif;
 }
 

@@ -34,20 +34,20 @@ h3 {
     @include highlight;
 }
 
-p{
-    font-size:20px;
+p {
+    font-size: 20px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 main {
-    padding-top:100px;
+    padding-top: 100px;
 }
 
 section {
-    padding:90px 100px 40px 100px;
+    padding: 40px 100px;
 }
 
 /* Menu */
@@ -77,27 +77,44 @@ section {
     }
 }
 
+/* Back to top */
+
+#back-to-top {
+    position: fixed;
+    border: 2px solid $coral;
+    border-radius: 60px;
+    padding: 7px 11px;
+    bottom: 40px;
+    right: 100px;
+    transform: rotate(180deg);
+}
+
 /* Home */
 
 #home {
     .home {
+        &_container {
+            max-width: 50%;
+            margin-left: 250px;
+        }
+
         &_presentation {
             p {
                 font-size: 48px;
                 font-weight: 900;
-                font-family: 'Raleway', sans-serif;
+                font-family: "Raleway", sans-serif;
             }
 
             &-dot {
-                color:$coral;
+                color: $coral;
                 margin-left: 5px;
-                font-family: 'Montserrat', sans-serif;
+                font-family: "Montserrat", sans-serif;
             }
         }
 
         &_resume {
             a {
-                color:$white;
+                color: $white;
             }
         }
 
@@ -106,7 +123,7 @@ section {
             text-align: center;
 
             #highlight {
-                font-size:22px
+                font-size: 22px;
             }
 
             img {
@@ -115,8 +132,72 @@ section {
         }
 
         @keyframes downarrow {
-            0% { transform: translateY(0) }
-            100% { transform: translateY(0.4em) }
-          }
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(0.4em);
+            }
+        }
+    }
+}
+
+/* Contact */
+
+#contact {
+    .contact {
+        &_subtitle {
+            @include subtitle;
+            span {
+                font-family: "Montserrat", sans-serif;
+                color: $green;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .contact_form {
+        label {
+            @include highlight;
+        }
+        .form-infos {
+            display: flex;
+            justify-content: space-between;
+            margin: 100px 0;
+
+            .form-item {
+                width: 45%;
+            }
+        }
+
+        .form-message {
+            margin-bottom: 60px;
+        }
+
+        .form-btn {
+            text-align: right;
+
+            button {
+                @include highlight;
+                background-color: $green;
+                color: white;
+                border: 0;
+                padding: 10px 25px;
+            }
+        }
+
+        .form-item {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                background: none;
+                border-bottom: 1px solid $grey;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                padding-top: 50px;
+            }
+        }
     }
 }

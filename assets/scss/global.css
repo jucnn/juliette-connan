@@ -59,7 +59,7 @@ main {
 }
 
 section {
-  padding: 90px 100px 40px 100px;
+  padding: 40px 100px;
 }
 
 /* Menu */
@@ -97,17 +97,34 @@ section {
   margin-left: 50px;
 }
 
+/* Back to top */
+#back-to-top {
+  position: fixed;
+  border: 2px solid #FF6B64;
+  border-radius: 60px;
+  padding: 7px 11px;
+  bottom: 40px;
+  right: 100px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 /* Home */
+#home .home_container {
+  max-width: 50%;
+  margin-left: 250px;
+}
+
 #home .home_presentation p {
   font-size: 48px;
   font-weight: 900;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 #home .home_presentation-dot {
   color: #FF6B64;
   margin-left: 5px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 #home .home_resume a {
@@ -148,5 +165,79 @@ section {
     -webkit-transform: translateY(0.4em);
             transform: translateY(0.4em);
   }
+}
+
+/* Contact */
+#contact .contact_subtitle {
+  font-weight: 900;
+  font-size: 34px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#contact .contact_subtitle span {
+  font-family: "Montserrat", sans-serif;
+  color: #4DD6A4;
+  margin-left: 5px;
+}
+
+#contact .contact_form label {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2.5px;
+}
+
+#contact .contact_form .form-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 100px 0;
+}
+
+#contact .contact_form .form-infos .form-item {
+  width: 45%;
+}
+
+#contact .contact_form .form-message {
+  margin-bottom: 60px;
+}
+
+#contact .contact_form .form-btn {
+  text-align: right;
+}
+
+#contact .contact_form .form-btn button {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2.5px;
+  background-color: #4DD6A4;
+  color: white;
+  border: 0;
+  padding: 10px 25px;
+}
+
+#contact .contact_form .form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact .contact_form .form-item input {
+  background: none;
+  border-bottom: 1px solid #403F3C;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-top: 50px;
 }
 /*# sourceMappingURL=global.css.map */

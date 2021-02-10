@@ -12,12 +12,57 @@
     <div id="app">
       <menu-desktop></menu-desktop>
       <main>
-        <home></home>
-        <works>
+        <section class="section-black" id="home">
+          <div class="home_container">
+            <div class="home_presentation">
+              <p>Hi!</p>
+              <p>
+                I’m Juliette,<br/>a front-end developer based in Paris<span
+                  class="home_presentation-dot"
+                  >.</span
+                >
+              </p>
+            </div>
+            <div class="home_resume">
+              <p>download my <a href="" target="_blank">resume</a></p>
+            </div>
+          </div>
+          <div class="home_discover">
+            <p id="highlight">Discover my work</p>
+            <img src="./assets/img/icons/arrow.svg" />
+          </div>
+        </section>
+        <section class="section-black">
+          <h1>Works</h1>
           <works-card></works-card>
-        </works>
-        <about></about>
-        <contact></contact>
+        </section>
+        <section class="section-white">
+          <h1>About</h1>
+        </section>
+        <section class="section-black" id="contact">
+          <h1>Contact</h1>
+          <p class="contact_subtitle">Any questions? <br> Let’s get in touch<span>.</span></p>
+          <form class="contact_form" action="mailto:juliettecnn@gmail.com">
+            <div class="form-infos">
+              <div class="form-item form-name">
+                <label for="name">Your name</label>
+                <input type="text" id="name">
+              </div>
+              <div class="form-item form-mail">
+                <label for="mail">Your mail</label>
+                <input type="text" id="mail">
+              </div>
+            </div>
+            <div class="form-item form-message">
+              <label for="message">What to do you want to tell me ?</label>
+              <input type="textarea" id="message">
+            </div>
+            <div class="form-btn">
+              <button type="submit" class="button">Send it</button>
+            </div>
+          </form>
+        </section>
+        <back-to-top></back-to-top>
         <the-footer></the-footer>
       </main>
     </div>
@@ -27,11 +72,7 @@
     <script src="components/BackToTop.vue.js"></script>
     <script src="components/menu/MenuDesktop.vue.js"></script>
     <script src="components/menu/MenuResponsive.vue.js"></script>
-    <script src="components/sections/Home.vue.js"></script>
-    <script src="components/sections/Works.vue.js"></script>
-    <script src="components/sections/About.vue.js"></script>
-    <script src="components/sections/Contact.vue.js"></script>
-    <script src="components/sections/works/WorksCard.vue.js"></script>
+    <script src="components/works/WorksCard.vue.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
