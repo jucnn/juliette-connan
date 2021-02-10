@@ -1,10 +1,16 @@
 @import "variables.scss";
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $fontFamily;
     font-weight: 400;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .section-black {
@@ -36,6 +42,10 @@ h3 {
 
 p {
     font-size: 20px;
+}
+
+input, textarea {
+font-size: 16px;
 }
 
 a {
@@ -73,6 +83,10 @@ section {
             font-weight: 900;
             font-size: 26px;
             margin-left: 50px;
+
+            a {
+                color:$white;
+            }
         }
     }
 }
@@ -183,6 +197,7 @@ section {
                 color: white;
                 border: 0;
                 padding: 10px 25px;
+                cursor: pointer;
             }
         }
 
@@ -190,13 +205,21 @@ section {
             display: flex;
             flex-direction: column;
 
-            input {
+            input, textarea {
                 background: none;
                 border-bottom: 1px solid $grey;
                 border-top: none;
                 border-left: none;
                 border-right: none;
-                padding-top: 50px;
+                margin-top: 30px;
+                padding: 5px;
+                color:$white;
+                font-family: 'Montserrat', sans-serif;
+                
+                &:focus {
+                    outline: 2px solid $green;
+
+                }
             }
         }
     }

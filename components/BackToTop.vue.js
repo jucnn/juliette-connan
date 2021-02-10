@@ -1,7 +1,9 @@
 Vue.component("back-to-top", {
     template: `
-    <div id="back-to-top">
-        <img src="./assets/img/icons/arrow.svg"/>
-    </div>
+    <a href="#">
+        <span id="back-to-top">
+            <img src="./assets/img/icons/arrow.svg"/>
+        </span>
+    </a>
     `,
 });

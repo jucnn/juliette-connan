@@ -1,12 +1,17 @@
 /* Colors */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Raleway:wght@600;900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .section-black {
@@ -48,6 +53,10 @@ h3 {
 
 p {
   font-size: 20px;
+}
+
+input, textarea {
+  font-size: 16px;
 }
 
 a {
@@ -95,6 +104,10 @@ section {
   font-weight: 900;
   font-size: 26px;
   margin-left: 50px;
+}
+
+#menu nav ul li a {
+  color: #F8F8F8;
 }
 
 /* Back to top */
@@ -220,6 +233,7 @@ section {
   color: white;
   border: 0;
   padding: 10px 25px;
+  cursor: pointer;
 }
 
 #contact .contact_form .form-item {
@@ -232,12 +246,19 @@ section {
           flex-direction: column;
 }
 
-#contact .contact_form .form-item input {
+#contact .contact_form .form-item input, #contact .contact_form .form-item textarea {
   background: none;
   border-bottom: 1px solid #403F3C;
   border-top: none;
   border-left: none;
   border-right: none;
-  padding-top: 50px;
+  margin-top: 30px;
+  padding: 5px;
+  color: #F8F8F8;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#contact .contact_form .form-item input:focus, #contact .contact_form .form-item textarea:focus {
+  outline: 2px solid #4DD6A4;
 }
 /*# sourceMappingURL=global.css.map */

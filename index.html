@@ -42,7 +42,7 @@
         <section class="section-black" id="contact">
           <h1>Contact</h1>
           <p class="contact_subtitle">Any questions? <br> Let’s get in touch<span>.</span></p>
-          <form class="contact_form" action="mailto:juliettecnn@gmail.com">
+          <form class="contact_form" action="POST" data-netlify="true">
             <div class="form-infos">
               <div class="form-item form-name">
                 <label for="name">Your name</label>
@@ -55,7 +55,7 @@
             </div>
             <div class="form-item form-message">
               <label for="message">What to do you want to tell me ?</label>
-              <input type="textarea" id="message">
+              <textarea id="message"></textarea>
             </div>
             <div class="form-btn">
               <button type="submit" class="button">Send it</button>
