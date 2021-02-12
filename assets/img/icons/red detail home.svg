@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="53.729" height="13.609" viewBox="0 0 53.729 13.609">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ff6b64;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="red_detail_home" data-name="red detail home" transform="translate(1.864 1.923)">
+    <path id="Detail_rouge" data-name="Detail rouge" class="cls-1" d="M50,8,42.854,0,36.9,6.242,30.6,0,25,6.242,19.049,0,13.1,6.242,7.147,0,0,8" transform="translate(50 8) rotate(180)"/>
+  </g>
+</svg>

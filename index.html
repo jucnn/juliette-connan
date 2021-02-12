@@ -12,7 +12,7 @@
     <div id="app">
       <menu-desktop></menu-desktop>
       <main>
-        <section class="section-black" id="home">
+        <section id="home">
           <div class="home_container">
             <div class="home_presentation">
               <p>Hi!</p>
@@ -28,20 +28,109 @@
             </div>
           </div>
           <div class="home_discover">
-            <p id="highlight">Discover my work</p>
+            <p class="highlight">Discover my work</p>
             <img src="./assets/img/icons/arrow.svg" />
           </div>
         </section>
-        <section class="section-black">
+        <section id="works">
           <h1>Works</h1>
           <works-card></works-card>
         </section>
-        <section class="section-white">
+        <section id="about">
           <h1>About</h1>
+          <h3>experience</h3>
+          <div class="experiences-container">
+            <div class="experiences_item">
+              <p class="highlight">Front end<br> developer</p>
+              <p>Vmed agency - Paris</p>
+              <p>2018 - now</p>
+            </div>
+            <div class="experiences_item">
+              <p class="highlight">Developer web<br> master degree</p>
+              <p>ECV Digital - Paris</p>
+              <p>2019 - now</p>
+            </div>
+            <div class="experiences_item">
+              <p class="highlight">UX Degree</p>
+              <p>Sup de Création - Paris</p>
+              <p>2018 - 2019</p>
+            </div>
+            <div class="experiences_item">
+              <p class="highlight">Web Development<br> intense formation</p>
+              <p>INSEEC Digital - Paris</p>
+              <p>2018 (6 weeks)</p>
+            </div>
+            <div class="experiences_item">
+              <p class="highlight">Au Pair</p>
+              <p>London</p>
+              <p>2017 - 2018</p>
+            </div>
+            <div class="experiences_item">
+              <p class="highlight">Communication<br> Degree</p>
+              <p>University Of Rennes</p>
+              <p>2014 - 2017</p>
+            </div>
+          </div>
+          <h3>skills</h3>
+          <div class="skills-container">
+            <div class="skills_item">
+              <p><img src="./assets/img/html-5.png" alt=""></p>
+              <p class="highlight">html</p>
+            </div>
+            <div class="skills_item">
+              <p><img src="./assets/img/html-5.png" alt=""></p>
+              <p class="highlight">css</p>
+            </div>
+            <div class="skills_item">
+              <p><img src="./assets/img/html-5.png" alt=""></p>
+              <p class="highlight">sass</p>
+            </div>
+            <div class="skills_item">
+              <p><img src="./assets/img/html-5.png" alt=""></p>
+              <p class="highlight">js es6</p>
+            </div>
+            <div class="skills_item">
+              <p><img src="./assets/img/html-5.png" alt=""></p>
+              <p class="highlight">vuejs</p>
+            </div>
+            <div class="skills_item">
+              <p><img src="./assets/img/html-5.png" alt=""></p>
+              <p class="highlight">github</p>
+            </div>
+            <div class="skills_item">
+              <p><img src="./assets/img/html-5.png" alt=""></p>
+              <p class="highlight">nodejs</p>
+            </div>
+            <div class="skills_item">
+              <p><img src="./assets/img/html-5.png" alt=""></p>
+              <p class="highlight">mongodb</p>
+            </div>
+            <div class="skills_item">
+              <p><img src="./assets/img/html-5.png" alt=""></p>
+              <p class="highlight">adobe xd</p>
+            </div>
+            <div class="skills_item">
+              <p><img src="./assets/img/html-5.png" alt=""></p>
+              <p class="highlight">ux sensitive</p>
+            </div>
+          </div>
         </section>
-        <section class="section-black" id="contact">
+        <section id="contact">
           <h1>Contact</h1>
-          <p class="contact_subtitle">Any questions? <br> Let’s get in touch<span>.</span></p>
+          <div class="contact_content">
+            <div class="contact_email">
+              <p class="highlight">Need my email ?</p>
+              <a href="">juliettecnn[a]gmail.com</a>
+            </div>
+            <div class="contact_networks">
+              <p class="highlight">Or see me there</p>
+              <div>
+                <a href="">linkedIn</a>
+                <a href="">github</a>
+              </div>
+            </div>
+          </div>
+        <!--   <p class="contact_subtitle">Any questions? <br> Let’s get in touch<span>.</span></p>
           <form class="contact_form" action="POST" data-netlify="true">
             <div class="form-infos">
               <div class="form-item form-name">
@@ -60,7 +149,7 @@
             <div class="form-btn">
               <button type="submit" class="button">Send it</button>
             </div>
-          </form>
+          </form> -->
         </section>
         <back-to-top></back-to-top>
         <the-footer></the-footer>
