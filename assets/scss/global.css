@@ -127,6 +127,12 @@ section {
 }
 
 /* Home */
+#home {
+  /*  ::selection, ::-moz-selection {
+        background: $coral;
+    } */
+}
+
 #home .home_container {
   max-width: 50%;
   margin-left: 250px;
@@ -229,11 +235,13 @@ section {
   width: 40%;
   -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
 }
 
 .works-card_description {
   padding: 40px;
   background-color: #323231;
+  border-radius: 16px;
 }
 
 .works-card_img {
@@ -327,6 +335,7 @@ section {
           justify-content: space-evenly;
   -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
 }
 
 #about .skills_item p {

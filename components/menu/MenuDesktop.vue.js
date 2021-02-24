@@ -1,7 +1,7 @@
 Vue.component("menu-desktop", {
     template: `
     <div id="menu">
-        <img src="./assets/img/logo.svg" alt="">
+        <a href="/"><img src="./assets/img/logo.svg" alt=""></a>
         <nav>
             <ul>
                 <li><a href="#">home</a></li>
