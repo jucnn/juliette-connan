@@ -31,7 +31,7 @@ h3 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 input,
@@ -70,7 +70,7 @@ main {
 }
 
 section {
-  padding: 40px 100px;
+  padding: 40px 0px;
 }
 
 /* Menu */
@@ -113,11 +113,6 @@ section {
         background: $coral;
     } */
   .home {
-    &_container {
-      max-width: 50%;
-      margin-left: 250px;
-    }
-
     &_presentation {
       p {
         font-size: 48px;
@@ -184,20 +179,24 @@ section {
 
 .works {
   &-container {
-    display: flex;
+    /*   display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
   }
 
   &-card {
     display: flex;
-    width: 490px;
     flex-direction: column;
     justify-content: flex-end;
-    margin-top: 40px;
-    width: 40%;
+    height: 100%;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
     border-radius: 16px;
+    padding: 0;
+    padding-top: 80px;
+
+    &_container {
+      margin-bottom: 40px;
+    }
 
     &_description {
       padding: 40px;
@@ -208,7 +207,7 @@ section {
     &_img {
       margin: 0 auto;
       display: block;
-      max-width: 100%;
+      max-width: 80%;
     }
 
     &_category {
@@ -223,6 +222,7 @@ section {
 
     a {
       color: $white;
+      cursor: pointer;
 
       &::after {
         content: "";
@@ -235,10 +235,135 @@ section {
 /* Project */
 
 .project {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: $black;
+  padding: 40px;
+  height: 100vh;
+  width: 100vw;
+
+  h1 {
+    font-size: 42px;
+    padding: 0;
+  }
+
+  &-infos {
+    max-height: 100%;
+  }
+
+  &-container {
+    border: 5px solid $grey;
+    padding: 60px;
+    height: 100%;
+    position: relative;
+
+    @media screen and (max-width: $lg) {
+      overflow-y: scroll;
+    }
+  }
 
   &-description {
     line-height: 1.6em;
-    font-size: 22px;
+    font-size: 18px;
+  }
+
+  &-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: $grey;
+    cursor: pointer;
+  }
+
+  &-details {
+    & > div {
+      margin-top: 40px;
+    }
+
+    a {
+      color: $white;
+
+      &::after {
+        content: "";
+        background-color: $yellow;
+      }
+    }
+  }
+
+  &-imgs {
+    height: 90%;
+    position: fixed;
+    right: 0;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media screen and (max-width: $lg) {
+      position: inherit;
+      margin-top: 60px;
+    }
+
+    img {
+      max-width: 100%;
+      margin-bottom: 60px;
+    }
+  }
+
+  &-navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+
+    @media screen and (max-width: $lg) {
+      position: inherit;
+      justify-content: center;
+    }
+
+    &_link {
+      padding: 20px 50px;
+      display: block;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.5em;
+      background-color: $yellow;
+      color: $black;
+      cursor: pointer;
+
+      &:nth-child(1) {
+        opacity: 0.4;
+      }
+
+      &:nth-child(2) {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &-transition {
+    &_layer {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    &--yellow {
+      background-color: $yellow;
+
+    }
+    &--black {
+      background-color: $black;
+
+    }
   }
 }
 
@@ -427,5 +552,13 @@ section {
   }
   span {
     color: $coral;
+  }
+}
+
+/* Media queries */
+
+@media screen and (max-width: $lg) {
+  p {
+    font-size: 16px;
   }
 }

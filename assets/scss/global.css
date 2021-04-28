@@ -1,6 +1,7 @@
 /* Colors */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Raleway:wght@600;900&display=swap");
+/* Media queries */
 html {
   scroll-behavior: smooth;
 }
@@ -18,7 +19,7 @@ body {
 
 h1 {
   font-weight: 900;
-  font-size: 38px;
+  font-size: 40px;
   font-family: 'Raleway', sans-serif;
   margin-top: 10px;
 }
@@ -44,7 +45,7 @@ h3 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 input,
@@ -82,7 +83,7 @@ main a:hover:after {
 }
 
 section {
-  padding: 40px 100px;
+  padding: 40px 0px;
 }
 
 /* Menu */
@@ -131,11 +132,6 @@ section {
   /*  ::selection, ::-moz-selection {
         background: $coral;
     } */
-}
-
-#home .home_container {
-  max-width: 50%;
-  margin-left: 250px;
 }
 
 #home .home_presentation p {
@@ -210,20 +206,15 @@ section {
 
 /* Works */
 .works-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  /*   display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; */
 }
 
 .works-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 490px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -231,11 +222,16 @@ section {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-top: 40px;
-  width: 40%;
+  height: 100%;
   -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
   border-radius: 16px;
+  padding: 0;
+  padding-top: 80px;
+}
+
+.works-card_container {
+  margin-bottom: 40px;
 }
 
 .works-card_description {
@@ -247,7 +243,7 @@ section {
 .works-card_img {
   margin: 0 auto;
   display: block;
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .works-card_category img {
@@ -260,6 +256,7 @@ section {
 
 .works-card a {
   color: #F8F8F8;
+  cursor: pointer;
 }
 
 .works-card a::after {
@@ -268,9 +265,145 @@ section {
 }
 
 /* Project */
+.project {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #2D2C2A;
+  padding: 40px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.project h1 {
+  font-size: 42px;
+  padding: 0;
+}
+
+.project-infos {
+  max-height: 100%;
+}
+
+.project-container {
+  border: 5px solid #403F3C;
+  padding: 60px;
+  height: 100%;
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .project-container {
+    overflow-y: scroll;
+  }
+}
+
 .project-description {
   line-height: 1.6em;
-  font-size: 22px;
+  font-size: 18px;
+}
+
+.project-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #403F3C;
+  cursor: pointer;
+}
+
+.project-details > div {
+  margin-top: 40px;
+}
+
+.project-details a {
+  color: #F8F8F8;
+}
+
+.project-details a::after {
+  content: "";
+  background-color: #FFDE07;
+}
+
+.project-imgs {
+  height: 90%;
+  position: fixed;
+  right: 0;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.project-imgs::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .project-imgs {
+    position: inherit;
+    margin-top: 60px;
+  }
+}
+
+.project-imgs img {
+  max-width: 100%;
+  margin-bottom: 60px;
+}
+
+.project-navigation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+  .project-navigation {
+    position: inherit;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.project-navigation_link {
+  padding: 20px 50px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5em;
+  background-color: #FFDE07;
+  color: #2D2C2A;
+  cursor: pointer;
+}
+
+.project-navigation_link:nth-child(1) {
+  opacity: 0.4;
+}
+
+.project-navigation_link:nth-child(2) {
+  opacity: 0.5;
+}
+
+.project-transition_layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.project-transition--yellow {
+  background-color: #FFDE07;
+}
+
+.project-transition--black {
+  background-color: #2D2C2A;
 }
 
 /* About */
@@ -475,5 +608,12 @@ section {
 
 #footer span {
   color: #FF6B64;
+}
+
+/* Media queries */
+@media screen and (max-width: 1200px) {
+  p {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=global.css.map */

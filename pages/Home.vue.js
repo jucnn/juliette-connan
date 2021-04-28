@@ -1,8 +1,8 @@
 const Home = {
     template: `
     <div>
-    <section id="home">
-      <div class="home_container">
+    <section id="home" class="container">
+      <div class="home_container col-12 col-md-8">
         <div class="home_presentation">
           <p>Hi!</p>
           <p>
@@ -26,19 +26,21 @@ const Home = {
         <img src="./assets/img/icons/arrow.svg" />
       </div>
     </section>
-    <section id="works">
+    <section id="works" class="container">
       <img src="./assets/img/icons/detail-title-yellow.svg" />
       <h1>Works</h1>
-      <div class="works-container" :key="">
+      <div class="container">
+      <div class="works-container row" :key="">
         <works-card v-for="project in projects"
         :title="project.name"
-        :image="project.image"
+        :image="project.thumbnail"
         :category="project.category"
         :slug="project.slug"
         url="/"></works-card>
       </div>
+      </div>
     </section>
-    <section id="about">
+    <section id="about" class="container">
       <img src="./assets/img/icons/detail-title-blue.svg" />
       <h1>About</h1>
   
@@ -131,7 +133,7 @@ const Home = {
         </div>
       </div>
     </section>
-    <section id="contact">
+    <section id="contact" class="container">
       <img src="./assets/img/icons/detail-title-green.svg" />
       <h1>Contact</h1>
       <div class="contact_content">
@@ -155,6 +157,18 @@ const Home = {
       return {
         projects: null,
       };
+    },
+    beforeDestroy() {
+      anime
+      .timeline({
+        easing: "easeOutExpo",
+        duration: 750,
+      })
+      .add({
+        targets: "section",
+        translateY: 250,
+        opacity:0
+      })
     },
     async mounted() {
       await axios
