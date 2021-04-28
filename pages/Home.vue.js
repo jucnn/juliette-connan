@@ -29,9 +29,13 @@ const Home = {
     <section id="works">
       <img src="./assets/img/icons/detail-title-yellow.svg" />
       <h1>Works</h1>
-      <div class="works-container">
-      <router-link :to="{ path: '/project'}">project</router-link>
-        
+      <div class="works-container" :key="">
+        <works-card v-for="project in projects"
+        :title="project.name"
+        :image="project.image"
+        :category="project.category"
+        :slug="project.slug"
+        url="/"></works-card>
       </div>
     </section>
     <section id="about">
@@ -146,5 +150,18 @@ const Home = {
     </section>
   </div>
   
-    `
+    `,
+    data() {
+      return {
+        projects: null,
+      };
+    },
+    async mounted() {
+      await axios
+        .get("./assets/json/projects.json")
+        .then(
+          (response) =>
+            this.projects = response.data
+        );
+    },
   } 

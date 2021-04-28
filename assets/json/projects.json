@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Stellar Interactiv",
+    "slug": "stellar-interactiv",
+    "category": "web development",
+    "image" : "./assets/img/works-stellar-interactiv.jpg",
+    "projectURL" : "https://stellar-interactiv.com/",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "type": "Work",
+    "done": [
+      "HTML",
+      "CSS",
+      "JS"  
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Interactive banners",
+    "slug": "interactive-banners",
+    "category": "web development",
+    "image" : "./assets/img/works-netexplo.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "type": "Work",
+    "done": [
+      "HTML",
+      "CSS",
+      "JS : Anime JS and/or Vue JS"  
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Netexplo App",
+    "slug": "netexplo-app",
+    "category": "UX - UI",
+    "image" : "./assets/img/works-netexplo.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "type": "School",
+    "done": [
+      "UX Thinking",
+      "Wireframe : XD",
+      "Prototype : XD"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Swapup App",
+    "slug": "swapup-app",
+    "category": "UX - UI & web development",
+    "image" : "./assets/img/works-netexplo.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "type": "School",
+    "done": [
+      "UX Thinking",
+      "Wireframe : XD",
+      "Prototype : XD",
+      "Back-end : NodeJS (ExpressJS)",
+      "Database : MongoDB",
+      "Front-end : VueJS"
+    ]
+  }
+]

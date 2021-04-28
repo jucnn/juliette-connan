@@ -1,6 +1,6 @@
 var routes = [
   { path: "/", name: "Home", component: Home },
-  { path: "/project", name: "Project", component: Project },
+  { path: "/project-:slug", name: "Project", component: Project, props: true },
 ];
 
 var router = new VueRouter({

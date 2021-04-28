@@ -267,6 +267,12 @@ section {
   background-color: #FFDE07;
 }
 
+/* Project */
+.project-description {
+  line-height: 1.6em;
+  font-size: 22px;
+}
+
 /* About */
 #about h3 {
   margin-top: 60px;
