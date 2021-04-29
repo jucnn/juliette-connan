@@ -19,9 +19,8 @@ Vue.component("project-popup", {
             <div class="project-details">
               <div v-if="project.projectURL">
                 <p>
-                  <span class="highlight">Website :</span>
-                  <a :href="project.projectURL" target="_blank"
-                    >{{project.projectURL}}</a
+                  can be seen <a :href="project.projectURL" target="_blank"
+                  >here</a
                   >
                 </p>
               </div>

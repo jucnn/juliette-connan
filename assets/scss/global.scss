@@ -341,6 +341,10 @@ section {
   height: 100vh;
   width: 100vw;
 
+  .highlight {
+    font-size: 14px;
+  }
+
   p {
     margin-bottom: 0;
     font-size: 16px;
@@ -350,11 +354,11 @@ section {
     padding: 30px;
   }
 
-  
+
   h1 {
     font-size: 42px;
     padding: 0;
-    margin-top: 0;
+    margin: 0;
   }
 
   &-infos {
