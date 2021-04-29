@@ -1,6 +1,6 @@
 Vue.component("works-card", {
   template: `
-    <div class="works-card_container col-6">
+    <div class="works-card_container col-12 col-md-6">
       <div class="works-card">
           <img class="works-card_img" :src="image" />
           <div class="works-card_description">

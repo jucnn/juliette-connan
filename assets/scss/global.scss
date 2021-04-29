@@ -45,7 +45,9 @@ a {
 
 main {
   padding-top: 100px;
+}
 
+body {
   a {
     position: relative;
     padding-bottom: 5px;
@@ -70,7 +72,7 @@ main {
 }
 
 section {
-  padding: 40px 0px;
+  padding: 100px 0px 0 0;
 }
 
 /* Menu */
@@ -104,6 +106,106 @@ section {
       }
     }
   }
+
+  @media screen and (max-width: $md) {
+    display: none;
+  }
+}
+
+#menu-responsive {
+  position: fixed;
+  top: 0;
+  background-color: $black;
+  padding: 20px 50px;
+  width: 100%;
+  z-index: 100;
+
+  .menu-responsive {
+    &_btn {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 7px;
+      cursor: pointer;
+      span {
+        height: 7px;
+        width: 7px;
+        border-radius: 100%;
+        background-color: $white;
+        display: block;
+
+        &:nth-child(9) {
+          background-color: $coral;
+        }
+      }
+    }
+  }
+  &_sidebar {
+    position: fixed;
+    background-color: $white;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 80vw;
+    z-index: 20000;
+    color: $black;
+    transform: translateX(100%);
+    opacity: 0;
+
+    .menu-responsive {
+      &_close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+
+        svg {
+          line {
+            stroke: $black;
+          }
+        }
+      }
+
+      &_links {
+        margin: 100px 30px 0 0;
+        a {
+          font-size: 38px;
+          font-weight: bold;
+          font-family: "Raleway", arial;
+          text-align: right;
+          color: $black;
+          display: block;
+          margin-bottom: 30px;
+
+          span {
+            font-family: "Montserrat", sans-serif;
+            font-size: 48px;
+          }
+
+          &:nth-child(1) span {
+            color: $coral;
+          }
+          &:nth-child(2) span {
+            color: $yellow;
+          }
+          &:nth-child(3) span {
+            color: $blue;
+          }
+          &:nth-child(4) span {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-responsive {
+  &_container {
+    display: none;
+
+    @media screen and (max-width: $md) {
+      display: block;
+    }
+  }
 }
 
 /* Home */
@@ -117,6 +219,7 @@ section {
       p {
         font-size: 48px;
         font-weight: 900;
+        margin-top: 0;
         font-family: "Raleway", sans-serif;
       }
 
@@ -152,11 +255,12 @@ section {
     }
 
     &_discover {
-      margin-top: 100px;
+      margin-top: 60px;
       text-align: center;
 
       #highlight {
         font-size: 22px;
+        margin-bottom: 10px;
       }
 
       img {
@@ -178,12 +282,6 @@ section {
 /* Works */
 
 .works {
-  &-container {
-    /*   display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; */
-  }
-
   &-card {
     display: flex;
     flex-direction: column;
@@ -243,9 +341,19 @@ section {
   height: 100vh;
   width: 100vw;
 
+  p {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: $md) {
+    padding: 30px;
+  }
+
   h1 {
     font-size: 42px;
     padding: 0;
+    margin-top: 0;
   }
 
   &-infos {
@@ -254,12 +362,17 @@ section {
 
   &-container {
     border: 5px solid $grey;
-    padding: 60px;
+    padding: 40px;
     height: 100%;
     position: relative;
 
+    @media screen and (max-width: $md) {
+      padding: 30px;
+    }
+
     @media screen and (max-width: $lg) {
       overflow-y: scroll;
+      padding: 40px;
     }
   }
 
@@ -270,16 +383,16 @@ section {
 
   &-close {
     position: absolute;
-    top: 0;
+    top: -1px;
     right: 0;
-    padding: 10px;
+    padding: 7px;
     background-color: $grey;
     cursor: pointer;
   }
 
   &-details {
     & > div {
-      margin-top: 40px;
+      margin-top: 20px;
     }
 
     a {
@@ -337,6 +450,10 @@ section {
       color: $black;
       cursor: pointer;
 
+      @media screen and (max-width: $md) {
+        padding: 15px 35px;
+      }
+
       &:nth-child(1) {
         opacity: 0.4;
       }
@@ -358,11 +475,9 @@ section {
     }
     &--yellow {
       background-color: $yellow;
-
     }
     &--black {
       background-color: $black;
-
     }
   }
 }
@@ -403,21 +518,14 @@ section {
   .skills {
     &-container {
       margin-top: 50px;
-      /*    display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            column-gap: 30px;
-            row-gap: 30px; */
       display: grid;
 
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       grid-auto-rows: 200px;
-      gap: 30px 30px;
+      gap: 30px;
     }
 
     &_item {
-      /*     width: 200px;
-            height: 200px; */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -471,60 +579,6 @@ section {
       }
     }
   }
-
-  /* .contact_form {
-        label {
-            @include highlight;
-        }
-        .form-infos {
-            display: flex;
-            justify-content: space-between;
-            margin: 100px 0;
-
-            .form-item {
-                width: 45%;
-            }
-        }
-
-        .form-message {
-            margin-bottom: 60px;
-        }
-
-        .form-btn {
-            text-align: right;
-
-            button {
-                @include highlight;
-                background-color: $green;
-                color: white;
-                border: 0;
-                padding: 10px 25px;
-                cursor: pointer;
-            }
-        }
-
-        .form-item {
-            display: flex;
-            flex-direction: column;
-
-            input, textarea {
-                background: none;
-                border-bottom: 1px solid $grey;
-                border-top: none;
-                border-left: none;
-                border-right: none;
-                margin-top: 30px;
-                padding: 5px;
-                color:$white;
-                font-family: 'Montserrat', sans-serif;
-                
-                &:focus {
-                    outline: 2px solid $green;
-
-                }
-            }
-        }
-    } */
 }
 
 /* Back to top */
@@ -537,6 +591,10 @@ section {
   bottom: 40px;
   right: 100px;
   transform: rotate(180deg);
+
+  @media screen and (max-width: $md) {
+    right: 50px;
+  }
 }
 
 /* Footer */

@@ -4,79 +4,54 @@
     "name": "Stellar Interactiv",
     "slug": "stellar-interactiv",
     "category": "web development",
-    "thumbnail" : "./assets/img/projects/stellar-interactiv/stellar_interactiv_1.png",
+    "thumbnail": "./assets/img/projects/stellar-interactiv/stellar_interactiv_1.png",
     "imgs": [
       "./assets/img/projects/stellar-interactiv/stellar_interactiv_1.png",
       "./assets/img/projects/stellar-interactiv/stellar_interactiv_3.png",
       "./assets/img/projects/stellar-interactiv/stellar_interactiv_3.png"
     ],
-    "projectURL" : "https://stellar-interactiv.com/",
+    "projectURL": "https://stellar-interactiv.com/",
     "description": "Stellar interactiv creates digital solutions for healthcare professionnals. My job was to integrate XD mock-up made by a webdesigner using HTML, CSS and native Javascript",
     "type": "Work",
-    "used": [
-      "HTML/CSS",
-      "Native Javascript",
-      "Adobe XD"
-    ]
+    "used": ["HTML/CSS", "Native Javascript", "Adobe XD"]
   },
   {
     "id": 2,
-    "name": "Interactive banners",
-    "slug": "interactive-banners",
-    "category": "web development",
-    "thumbnail" : "./assets/img/works-netexplo.png",
-    "imgs": [
-      "./assets/img/projects/stellar-interactiv/stellar_interactiv_1.png",
-      "./assets/img/projects/stellar-interactiv/stellar_interactiv_3.png",
-      "./assets/img/projects/stellar-interactiv/stellar_interactiv_3.png"
-    ],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "type": "Work",
-    "used": [
-      "HTML",
-      "CSS",
-      "JS : Anime JS and/or Vue JS"  
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Netexplo App",
-    "slug": "netexplo-app",
-    "category": "UX - UI",
-    "thumbnail" : "./assets/img/works-netexplo.png",
-    "imgs": [
-      "./assets/img/projects/stellar-interactiv/stellar_interactiv_1.png",
-      "./assets/img/projects/stellar-interactiv/stellar_interactiv_3.png",
-      "./assets/img/projects/stellar-interactiv/stellar_interactiv_3.png"
-    ],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "type": "School",
-    "used": [
-      "UX Thinking",
-      "Wireframe : XD",
-      "Prototype : XD"
-    ]
-  },
-  {
-    "id": 4,
     "name": "Swapup App",
     "slug": "swapup-app",
     "category": "UX - UI & web development",
-    "thumbnail" : "./assets/img/works-netexplo.png",
+    "thumbnail": "./assets/img/projects/swapup/swapup_register.png",
     "imgs": [
-      "./assets/img/projects/stellar-interactiv/stellar_interactiv_1.png",
-      "./assets/img/projects/stellar-interactiv/stellar_interactiv_3.png",
-      "./assets/img/projects/stellar-interactiv/stellar_interactiv_3.png"
+      "./assets/img/projects/swapup/swapup_register.png",
+      "./assets/img/projects/swapup/swapup_feed.png",
+      "./assets/img/projects/swapup/swapup_profile.png",
+      "./assets/img/projects/swapup/swapup_swap.png",
+      "./assets/img/projects/swapup/swapup_object.png"
     ],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "type": "School",
     "used": [
       "UX Thinking",
-      "Wireframe : XD",
-      "Prototype : XD",
+      "Wireframe & Prototype : XD",
       "Back-end : NodeJS (ExpressJS)",
       "Database : MongoDB",
       "Front-end : VueJS"
     ]
+  },
+  {
+    "id": 3,
+    "name": "Thérapies géniques et cellulaires",
+    "slug": "interactive-banners",
+    "category": "web development",
+    "thumbnail": "./assets/img/projects/therapies-geniques-nvs/therapies_geniques_hp.png",
+    "imgs": [
+      "./assets/img/projects/therapies-geniques-nvs/therapies_geniques_hp.png",
+      "./assets/img/projects/therapies-geniques-nvs/therapies_geniques_tooltip.png",
+      "./assets/img/projects/therapies-geniques-nvs/therapies_geniques_quizz.png",
+      "./assets/img/projects/therapies-geniques-nvs/therapies_geniques_page.png"
+    ],
+    "description": "Thérapies géniques et cellulaires is a Novartis (swiss pharmaceutical laboratory) website. I had to integrate Photoshop mock-up using Twig template inside Drupal 7",
+    "type": "Work",
+    "used": ["Photoshop", "HTML / CSS : Twig", "Javascript"]
   }
 ]

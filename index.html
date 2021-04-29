@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-v4-grid-only@1.0.0/dist/bootstrap-grid.css"
     />
     <link rel="stylesheet" href="assets/scss/global.css" />
+    <link rel="icon" type="image/png" href="./assets/img/logo-responsive.png">
 
     <title>Juliette Connan - Portfolio</title>
   </head>
@@ -15,7 +16,17 @@
   <body>
     <div id="app">
       <menu-desktop></menu-desktop>
-      <project-popup @close="closeProject" v-if="projectPopup" :project="projectClicked"></project-popup>
+      <div class="menu-responsive_container">
+        <menu-responsive-sidebar v-if="menuResponsiveDisplayed"  @click="closeMenu"></menu-responsive-sidebar>
+        <menu-responsive @click="openMenu"></menu-responsive>
+      </div>
+      <project-popup
+        @previous="navigationBetweenProjects('previous')"
+        @next="navigationBetweenProjects('next')"
+        @close="closeProject"
+        v-if="projectPopup"
+        :project="projectDisplayed"
+      ></project-popup>
       <main>
         <div>
           <section id="home" class="container">
@@ -48,7 +59,8 @@
             <h1>Works</h1>
             <div class="container" v-if="projects">
               <div class="works-container row" :key="">
-                <works-card @click="showProject"
+                <works-card
+                  @click="showProject"
                   v-for="project in projects"
                   :title="project.name"
                   :image="project.thumbnail"
@@ -190,6 +202,7 @@
     <script src="components/BackToTop.vue.js"></script>
     <script src="components/menu/MenuDesktop.vue.js"></script>
     <script src="components/menu/MenuResponsive.vue.js"></script>
+    <script src="components/menu/MenuResponsiveSidebar.vue.js"></script>
     <script src="components/works/WorksCard.vue.js"></script>
     <script src="components/ProjectPopup.vue.js"></script>
     <script src="pages/home.vue.js"></script>

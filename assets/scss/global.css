@@ -61,12 +61,12 @@ main {
   padding-top: 100px;
 }
 
-main a {
+body a {
   position: relative;
   padding-bottom: 5px;
 }
 
-main a::after {
+body a::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -76,14 +76,14 @@ main a::after {
   opacity: 0.3;
 }
 
-main a:hover:after {
+body a:hover:after {
   opacity: 1;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 
 section {
-  padding: 40px 0px;
+  padding: 100px 0px 0 0;
 }
 
 /* Menu */
@@ -127,6 +127,111 @@ section {
   color: #F8F8F8;
 }
 
+@media screen and (max-width: 992px) {
+  #menu {
+    display: none;
+  }
+}
+
+#menu-responsive {
+  position: fixed;
+  top: 0;
+  background-color: #2D2C2A;
+  padding: 20px 50px;
+  width: 100%;
+  z-index: 100;
+}
+
+#menu-responsive .menu-responsive_btn {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 7px;
+  cursor: pointer;
+}
+
+#menu-responsive .menu-responsive_btn span {
+  height: 7px;
+  width: 7px;
+  border-radius: 100%;
+  background-color: #F8F8F8;
+  display: block;
+}
+
+#menu-responsive .menu-responsive_btn span:nth-child(9) {
+  background-color: #FF6B64;
+}
+
+#menu-responsive_sidebar {
+  position: fixed;
+  background-color: #F8F8F8;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 80vw;
+  z-index: 20000;
+  color: #2D2C2A;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+}
+
+#menu-responsive_sidebar .menu-responsive_close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+#menu-responsive_sidebar .menu-responsive_close svg line {
+  stroke: #2D2C2A;
+}
+
+#menu-responsive_sidebar .menu-responsive_links {
+  margin: 100px 30px 0 0;
+}
+
+#menu-responsive_sidebar .menu-responsive_links a {
+  font-size: 38px;
+  font-weight: bold;
+  font-family: "Raleway", arial;
+  text-align: right;
+  color: #2D2C2A;
+  display: block;
+  margin-bottom: 30px;
+}
+
+#menu-responsive_sidebar .menu-responsive_links a span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+}
+
+#menu-responsive_sidebar .menu-responsive_links a:nth-child(1) span {
+  color: #FF6B64;
+}
+
+#menu-responsive_sidebar .menu-responsive_links a:nth-child(2) span {
+  color: #FFDE07;
+}
+
+#menu-responsive_sidebar .menu-responsive_links a:nth-child(3) span {
+  color: #4A40FD;
+}
+
+#menu-responsive_sidebar .menu-responsive_links a:nth-child(4) span {
+  color: #4DD6A4;
+}
+
+.menu-responsive_container {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .menu-responsive_container {
+    display: block;
+  }
+}
+
 /* Home */
 #home {
   /*  ::selection, ::-moz-selection {
@@ -137,6 +242,7 @@ section {
 #home .home_presentation p {
   font-size: 48px;
   font-weight: 900;
+  margin-top: 0;
   font-family: "Raleway", sans-serif;
 }
 
@@ -169,12 +275,13 @@ section {
 }
 
 #home .home_discover {
-  margin-top: 100px;
+  margin-top: 60px;
   text-align: center;
 }
 
 #home .home_discover #highlight {
   font-size: 22px;
+  margin-bottom: 10px;
 }
 
 #home .home_discover img {
@@ -205,12 +312,6 @@ section {
 }
 
 /* Works */
-.works-container {
-  /*   display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; */
-}
-
 .works-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -275,9 +376,21 @@ section {
   width: 100vw;
 }
 
+.project p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 992px) {
+  .project {
+    padding: 30px;
+  }
+}
+
 .project h1 {
   font-size: 42px;
   padding: 0;
+  margin-top: 0;
 }
 
 .project-infos {
@@ -286,14 +399,21 @@ section {
 
 .project-container {
   border: 5px solid #403F3C;
-  padding: 60px;
+  padding: 40px;
   height: 100%;
   position: relative;
+}
+
+@media screen and (max-width: 992px) {
+  .project-container {
+    padding: 30px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .project-container {
     overflow-y: scroll;
+    padding: 40px;
   }
 }
 
@@ -304,15 +424,15 @@ section {
 
 .project-close {
   position: absolute;
-  top: 0;
+  top: -1px;
   right: 0;
-  padding: 10px;
+  padding: 7px;
   background-color: #403F3C;
   cursor: pointer;
 }
 
 .project-details > div {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .project-details a {
@@ -381,6 +501,12 @@ section {
   cursor: pointer;
 }
 
+@media screen and (max-width: 992px) {
+  .project-navigation_link {
+    padding: 15px 35px;
+  }
+}
+
 .project-navigation_link:nth-child(1) {
   opacity: 0.4;
 }
@@ -443,22 +569,15 @@ section {
 
 #about .skills-container {
   margin-top: 50px;
-  /*    display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            column-gap: 30px;
-            row-gap: 30px; */
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: 200px;
-  gap: 30px 30px;
+  gap: 30px;
 }
 
 #about .skills_item {
-  /*     width: 200px;
-            height: 200px; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -486,62 +605,6 @@ section {
 }
 
 /* Contact */
-#contact {
-  /* .contact_form {
-        label {
-            @include highlight;
-        }
-        .form-infos {
-            display: flex;
-            justify-content: space-between;
-            margin: 100px 0;
-
-            .form-item {
-                width: 45%;
-            }
-        }
-
-        .form-message {
-            margin-bottom: 60px;
-        }
-
-        .form-btn {
-            text-align: right;
-
-            button {
-                @include highlight;
-                background-color: $green;
-                color: white;
-                border: 0;
-                padding: 10px 25px;
-                cursor: pointer;
-            }
-        }
-
-        .form-item {
-            display: flex;
-            flex-direction: column;
-
-            input, textarea {
-                background: none;
-                border-bottom: 1px solid $grey;
-                border-top: none;
-                border-left: none;
-                border-right: none;
-                margin-top: 30px;
-                padding: 5px;
-                color:$white;
-                font-family: 'Montserrat', sans-serif;
-                
-                &:focus {
-                    outline: 2px solid $green;
-
-                }
-            }
-        }
-    } */
-}
-
 #contact .contact_subtitle {
   font-weight: 900;
   font-size: 34px;
@@ -591,6 +654,12 @@ section {
   right: 100px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+@media screen and (max-width: 992px) {
+  #back-to-top {
+    right: 50px;
+  }
 }
 
 /* Footer */

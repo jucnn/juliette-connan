@@ -7,12 +7,12 @@ Vue.component("project-popup", {
       </div>
       <div class="project-container container-fluid">
         <div class="project-close">
-          <a @click="$emit('close')">
+          <a @click="close()">
             <img src="./assets/img/icons/cross.svg" />
           </a>
         </div>
      
-        <div class="row">
+        <div class="project-infos_container row">
           <div class="project-infos col-12 col-xl-5">
             <h1 class="col-12 col-sm-6">{{project.name}}</h1>
             <p class="project-description">{{project.description}}</p>
@@ -40,8 +40,8 @@ Vue.component("project-popup", {
           </div>
         </div>
         <div class="project-navigation">
-        <a class="project-navigation_link">Previous</a>
-        <a class="project-navigation_link">Next</a>
+        <a class="project-navigation_link" @click="$emit('previous', project.id)">Previous</a>
+        <a class="project-navigation_link" @click="$emit('next', project.id)">Next</a>
       </div>
       </div>
     </section>
@@ -49,12 +49,12 @@ Vue.component("project-popup", {
     `,
   data() {
     return {
-      mainDuration: 600,
+      mainDuration: 800,
       easing: "easeOutExpo",
     };
   },
   props: {
-    project: Object
+    project: Object,
   },
   methods: {
     transition() {
@@ -65,28 +65,20 @@ Vue.component("project-popup", {
         })
         .add({
           targets: ".project-transition--yellow",
-          translateY: ["100%", 0],
+          keyframes: [
+            { translateY: ["100%", 0] },
+            { translateY: [0, "-100%"] },
+          ],
         })
         .add(
           {
             targets: ".project-transition--black",
-            translateY: ["100%", 0],
+            keyframes: [
+              { translateY: ["100%", 0] },
+              { translateY: [0, "-100%"] },
+            ],
           },
-          "-= 300"
-        )
-        .add(
-          {
-            targets: ".project-transition--yellow",
-            height: 0,
-          },
-          "-=" + this.mainDuration
-        )
-        .add(
-          {
-            targets: ".project-transition--black",
-            height: 0,
-          },
-          "-= 300"
+          "-= 400"
         )
         .add(
           {
@@ -98,35 +90,59 @@ Vue.component("project-popup", {
         .add(
           {
             targets: ".project-imgs",
-            translateY: ["100%", 0],
+            translateY: ["100%", "4%"],
             duration: 1200,
           },
           "-=" + this.mainDuration
         );
     },
-    test() {
-      anime
+    async close() {
+      var animation = anime
         .timeline({
           easing: this.easing,
           duration: this.mainDuration,
         })
         .add({
           targets: ".project-imgs",
-          translateY: [0, "-100%"],
-          duration: 1200,
-        });
+          translateY: ["4%", "30%"],
+          opacity: [1, 0],
+        })
+        .add(
+          {
+            targets: ".project-container",
+            opacity: [1, 0],
+          },
+          "-=" + this.mainDuration
+        )
+        .add(
+          {
+            targets: ".project-transition--yellow",
+            keyframes: [
+              { translateY: ["-100%", 0] },
+              { translateY: [0, "100%"] },
+            ],
+          },
+          "-= 500" 
+        )
+        .add(
+          {
+            targets: ".project-transition--black",
+            keyframes: [
+              { translateY: ["-100%", 0] },
+              { translateY: [0, "100%"] },
+            ],
+          },
+          "-= 400"
+        );
+      animation.play;
+      animation.finished.then(() => {
+        this.projectPopup = false;
+        this.$emit("close");
+      });
     },
+    /*   }, */
   },
   async mounted() {
-    /* await axios
-      .get("./assets/json/projects.json")
-      .then(
-        (response) =>
-          (this.project = response.data.filter(
-            (project) => project.slug == this.$route.params.slug
-          )[0])
-      );
- */
     this.transition();
   },
 });
