@@ -41,7 +41,8 @@
   {
     "id": 3,
     "name": "Thérapies géniques et cellulaires",
-    "slug": "interactive-banners",
+    "slug": "therapies-geniques-cellulaires",
+    "projectURL": "https://www.therapies-geniques-cellulaires.fr/",
     "category": "web development",
     "thumbnail": "./assets/img/projects/therapies-geniques-nvs/therapies_geniques_hp.png",
     "imgs": [
