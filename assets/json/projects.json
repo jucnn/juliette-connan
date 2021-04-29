@@ -11,7 +11,7 @@
       "./assets/img/projects/stellar-interactiv/stellar_interactiv_3.png"
     ],
     "projectURL": "https://stellar-interactiv.com/",
-    "description": "Stellar interactiv creates digital solutions for healthcare professionnals. My job was to integrate XD mock-up made by a webdesigner using HTML, CSS and native Javascript",
+    "description": "Stellar interactiv creates digital solutions for healthcare professionnals. I itnegrated XD mock-up made by a webdesigner using HTML, CSS and native Javascript",
     "type": "Work",
     "used": ["HTML/CSS", "Native Javascript", "Adobe XD"]
   },
@@ -28,7 +28,7 @@
       "./assets/img/projects/swapup/swapup_swap.png",
       "./assets/img/projects/swapup/swapup_object.png"
     ],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "description": "Swapup is a fictive web app for swapping object with people or sell it for donations. I did the UI of the website and I developed it using VueJS, NodeJS and MongoDB",
     "type": "School",
     "used": [
       "UX Thinking",

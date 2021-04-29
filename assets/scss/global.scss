@@ -350,6 +350,7 @@ section {
     padding: 30px;
   }
 
+  
   h1 {
     font-size: 42px;
     padding: 0;
@@ -358,6 +359,10 @@ section {
 
   &-infos {
     max-height: 100%;
+
+    &_container {
+      height: 125%;
+    }
   }
 
   &-container {

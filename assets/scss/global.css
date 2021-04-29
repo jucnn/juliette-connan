@@ -397,6 +397,10 @@ section {
   max-height: 100%;
 }
 
+.project-infos_container {
+  height: 125%;
+}
+
 .project-container {
   border: 5px solid #403F3C;
   padding: 40px;

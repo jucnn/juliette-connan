@@ -14,7 +14,7 @@ Vue.component("project-popup", {
      
         <div class="project-infos_container row">
           <div class="project-infos col-12 col-xl-5">
-            <h1 class="col-12 col-sm-6">{{project.name}}</h1>
+            <h1 class="col-12 col-sm-8">{{project.name}}</h1>
             <p class="project-description">{{project.description}}</p>
             <div class="project-details">
               <div v-if="project.projectURL">
