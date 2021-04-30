@@ -8,16 +8,19 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-v4-grid-only@1.0.0/dist/bootstrap-grid.css"
     />
     <link rel="stylesheet" href="assets/scss/global.css" />
-    <link rel="icon" type="image/png" href="./assets/img/logo-responsive.png">
+    <link rel="icon" type="image/png" href="./assets/img/logo-responsive.png" />
 
     <title>Juliette Connan - Portfolio</title>
   </head>
 
   <body>
     <div id="app">
-      <menu-desktop></menu-desktop>
+      <menu-desktop :linkactive="menuLinkActive"></menu-desktop>
       <div class="menu-responsive_container">
-        <menu-responsive-sidebar v-if="menuResponsiveDisplayed"  @click="closeMenu"></menu-responsive-sidebar>
+        <menu-responsive-sidebar
+          v-if="menuResponsiveDisplayed"
+          @click="closeMenu"
+        ></menu-responsive-sidebar>
         <menu-responsive @click="openMenu"></menu-responsive>
       </div>
       <project-popup
@@ -29,7 +32,7 @@
       ></project-popup>
       <main>
         <div>
-          <section id="home" class="container">
+          <section id="home" ref="section_home" class="container">
             <div class="home_container col-12 col-md-8">
               <div class="home_presentation">
                 <p>Hi!</p>
@@ -38,7 +41,6 @@
                     class="home_presentation-detail"
                     src="./assets/img/icons/detail-title-red.svg"
                   />
-
                   I’m Juliette,<br />a front-end developer based in Paris<span
                     class="home_presentation-dot"
                     >.</span
@@ -54,7 +56,7 @@
               <img src="./assets/img/icons/arrow.svg" />
             </div>
           </section>
-          <section id="works" class="container">
+          <section id="works" ref="section_works" class="container">
             <img src="./assets/img/icons/detail-title-yellow.svg" />
             <h1>Works</h1>
             <div class="container" v-if="projects">
@@ -71,10 +73,9 @@
               </div>
             </div>
           </section>
-          <section id="about" class="container">
+          <section id="about" ref="section_about" class="container">
             <img src="./assets/img/icons/detail-title-blue.svg" />
             <h1>About</h1>
-
             <h3>
               <img src="./assets/img/icons/detail-wave-blue.svg" /> experience
             </h3>
@@ -168,19 +169,21 @@
               </div>
             </div>
           </section>
-          <section id="contact" class="container">
+          <section id="contact" ref="section_contact" class="container">
             <img src="./assets/img/icons/detail-title-green.svg" />
             <h1>Contact</h1>
-            <div class="contact_content">
-              <div class="contact_email">
-                <p class="highlight">Need my email ?</p>
-                <a href="">juliettecnn[a]gmail.com</a>
-              </div>
-              <div class="contact_networks">
-                <p class="highlight">Or see me there</p>
-                <div>
-                  <a href="">linkedIn</a>
-                  <a href="">github</a>
+            <div class="container">
+              <div class="contact_content row">
+                <div class="contact_email col-12 col-md-6">
+                    <p class="highlight">Need my email ?</p>
+                    <a href="">juliettecnn[a]gmail.com</a>
+                </div>
+                <div class="contact_networks col-12 col-md-6">
+                    <p class="highlight">Or see me there</p>
+                      <div>
+                        <a href="https://www.linkedin.com/in/juliette-connan/" target="_blank">linkedIn</a>
+                        <a href="https://github.com/jucnn" target="_blank">github</a>
+                      </div>
                 </div>
               </div>
             </div>

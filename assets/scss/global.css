@@ -123,6 +123,22 @@ section {
   margin-left: 50px;
 }
 
+#menu nav ul li #link-home.active {
+  color: #FF6B64;
+}
+
+#menu nav ul li #link-works.active {
+  color: #FFDE07;
+}
+
+#menu nav ul li #link-about.active {
+  color: #4A40FD;
+}
+
+#menu nav ul li #link-contact.active {
+  color: #4DD6A4;
+}
+
 #menu nav ul li a {
   color: #F8F8F8;
 }
@@ -634,12 +650,13 @@ section {
 }
 
 #contact .contact_content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  /*   display: flex;
+      justify-content: space-around; */
   margin-top: 60px;
+}
+
+#contact .contact_content > div {
+  text-align: center;
 }
 
 #contact .contact_content a {
@@ -651,13 +668,15 @@ section {
   background-color: #4DD6A4;
 }
 
-#contact .contact_networks div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media screen and (max-width: 992px) {
+  #contact .contact_email {
+    margin-bottom: 40px;
+  }
+}
+
+#contact .contact_networks a {
+  margin-right: 50px;
+  margin-right: 10px;
 }
 
 /* Back to top */
@@ -682,6 +701,7 @@ section {
 #footer {
   background-color: #2D2C2A;
   text-align: center;
+  margin-top: 100px;
 }
 
 #footer p {

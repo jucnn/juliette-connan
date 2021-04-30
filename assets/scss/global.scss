@@ -101,6 +101,22 @@ section {
       font-size: 26px;
       margin-left: 50px;
 
+      #link-home.active {
+        color: $coral;
+      }
+
+      #link-works.active {
+        color: $yellow;
+      }
+
+      #link-about.active {
+        color: $blue;
+      }
+
+      #link-contact.active {
+        color: $green;
+      }
+
       a {
         color: $white;
       }
@@ -354,7 +370,6 @@ section {
     padding: 30px;
   }
 
-
   h1 {
     font-size: 42px;
     padding: 0;
@@ -368,7 +383,7 @@ section {
       height: 125%;
 
       @media screen and (max-width: $lg) {
-        height:auto;
+        height: auto;
       }
     }
   }
@@ -573,9 +588,13 @@ section {
     }
 
     &_content {
-      display: flex;
-      justify-content: space-around;
+      /*   display: flex;
+      justify-content: space-around; */
       margin-top: 60px;
+
+      & > div {
+        text-align: center;
+      }
 
       a {
         color: $white;
@@ -587,10 +606,17 @@ section {
       }
     }
 
+    &_email {
+      @media screen and (max-width: $md) {
+        margin-bottom: 40px;
+      }
+    }
+
     &_networks {
-      div {
-        display: flex;
-        justify-content: space-between;
+      a {
+        margin-right: 50px;
+
+        margin-right: 10px;
       }
     }
   }
@@ -617,6 +643,7 @@ section {
 #footer {
   background-color: $black;
   text-align: center;
+  margin-top: 100px;
   p {
     font-size: 12px;
     margin: 0;

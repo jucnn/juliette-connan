@@ -15,6 +15,12 @@ var app = new Vue({
       mainDuration: 600,
       easing: "easeOutExpo",
       menuResponsiveDisplayed: false,
+      menuLinkActive: "home",
+      windowTop: 0,
+      homePosition: null,
+      worksPosition: null, 
+      aboutPosition: null, 
+      contactPosition: null, 
     };
   },
   router: router,
@@ -113,11 +119,36 @@ var app = new Vue({
         this.menuResponsiveDisplayed = false;
       });
     },
+    onScroll(e) {
+      //TODO: Dynamise menu 
+      this.windowTop = window.pageYOffset;
+      if(this.windowTop < 400) {
+        this.menuLinkActive = "home"
+      } else if(this.windowTop > 400 && this.windowTop < 1700) {
+        this.menuLinkActive = "works"
+      } else if(this.windowTop > 1700 && this.windowTop < 3000) {
+        this.menuLinkActive = "about"
+      } else {
+        this.menuLinkActive = "contact"
+      }
+    },
+    calcPosOfSection() {
+      this.homePosition = this.$refs["section_home"].getBoundingClientRect().y;
+      this.worksPosition = this.$refs["section_works"].getBoundingClientRect().y;
+      this.aboutPosition = this.$refs["section_works"].getBoundingClientRect().y;
+      this.contactPosition = this.$refs["section_contact"].getBoundingClientRect().y;
+
+    }
   },
   async mounted() {
+    window.addEventListener("scroll", this.onScroll);
+    this.calcPosOfSection();
     this.homeTransition();
     await axios
       .get("./assets/json/projects.json")
       .then((response) => (this.projects = response.data));
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll);
   },
 });
