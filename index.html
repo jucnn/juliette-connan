@@ -48,29 +48,15 @@
                 </p>
               </div>
               <div class="home_resume">
-                <p>download my <a href="./assets/docs/resume.pdf" target="_blank">resume</a></p>
+                <p>
+                  download my
+                  <a href="./assets/docs/resume.pdf" target="_blank">resume</a>
+                </p>
               </div>
             </div>
             <div class="home_discover">
               <p class="highlight">Discover my work</p>
               <img src="./assets/img/icons/arrow.svg" />
-            </div>
-          </section>
-          <section id="works" ref="section_works" class="container">
-            <img src="./assets/img/icons/detail-title-yellow.svg" />
-            <h1>Works</h1>
-            <div class="container" v-if="projects">
-              <div class="works-container row" :key="">
-                <works-card
-                  @click="showProject"
-                  v-for="project in projects"
-                  :title="project.name"
-                  :image="project.thumbnail"
-                  :category="project.category"
-                  :slug="project.slug"
-                  url="/"
-                ></works-card>
-              </div>
             </div>
           </section>
           <section id="about" ref="section_about" class="container">
@@ -124,17 +110,22 @@
               </div>
             </div>
             <div class="certifications-container">
-              <h3> <img src="./assets/img/icons/detail-wave-blue.svg" /> certifcations</h3>
+              <h3>
+                <img src="./assets/img/icons/detail-wave-blue.svg" />
+                certifcations
+              </h3>
               <p>
-                <a href="./assets/docs/eco-conception.pdf">Web eco conception</a>
+                <a href="./assets/docs/eco-conception.pdf"
+                  >Web eco conception</a
+                >
               </p>
               <p>
                 <a href="./assets/docs/opquast.pdf">Opquast</a>
               </p>
-
             </div>
             <h3>
-              <img src="./assets/img/icons/detail-wave-blue.svg" /> skills / tools / certifications
+              <img src="./assets/img/icons/detail-wave-blue.svg" /> skills /
+              tools / certifications
             </h3>
             <div class="skills-container">
               <div class="skills_item">
@@ -174,21 +165,47 @@
               </div>
             </div>
           </section>
+          <section id="works" ref="section_works" class="container">
+            <img src="./assets/img/icons/detail-title-yellow.svg" />
+            <h1>Works</h1>
+            <div class="container" v-if="projects">
+              <div class="works-container row" :key="">
+                <works-card
+                  @click="showProject"
+                  v-for="project in projects"
+                  :title="project.name"
+                  :image="project.thumbnail"
+                  :category="project.category"
+                  :slug="project.slug"
+                  url="/"
+                ></works-card>
+              </div>
+            </div>
+          </section>
+
           <section id="contact" ref="section_contact" class="container">
             <img src="./assets/img/icons/detail-title-green.svg" />
             <h1>Contact</h1>
             <div class="container">
               <div class="contact_content row">
                 <div class="contact_email col-12 col-md-6">
-                    <p class="highlight">Need my email ?</p>
-                    <a href="mailto:juliettecnn@gmail.com">juliettecnn[a]gmail.com</a>
+                  <p class="highlight">Need my email ?</p>
+                  <a href="mailto:juliettecnn@gmail.com"
+                    >juliettecnn[a]gmail.com</a
+                  >
                 </div>
                 <div class="contact_networks col-12 col-md-6">
-                    <p class="highlight">Or see me there</p>
-                      <div>
-                        <a href="https://www.linkedin.com/in/juliette-connan/" target="_blank">linkedIn</a>
-                        <a href="https://github.com/jucnn" target="_blank">github</a>
-                      </div>
+                  <p class="highlight">Or see me there</p>
+                  <div>
+                    <a
+                      href="https://www.linkedin.com/in/juliette-connan/"
+                      target="_blank"
+                      >linkedIn</a
+                    >
+                    <a href="https://github.com/jucnn" target="_blank"
+                      >github</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>

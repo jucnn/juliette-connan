@@ -12,8 +12,8 @@ Vue.component("menu-responsive-sidebar", {
         </div>
         <div class="menu-responsive_links">
             <a href="#home" @click="$emit('click')"><span>.</span> home</a>
-            <a href="#works" @click="$emit('click')"><span>.</span> works</a>   
             <a href="#about" @click="$emit('click')"><span>.</span> about</a>
+            <a href="#works" @click="$emit('click')"><span>.</span> works</a>   
             <a href="#contact" @click="$emit('click')"><span>.</span> contact</a>
         </div>
     </div>
