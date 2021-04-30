@@ -599,6 +599,23 @@ section {
   margin: 0;
 }
 
+#about .certifications-container {
+  margin-bottom: 60px;
+}
+
+#about .certifications-container h3 {
+  margin-bottom: 40px;
+}
+
+#about .certifications-container a {
+  color: #F8F8F8;
+}
+
+#about .certifications-container a::after {
+  content: "";
+  background-color: #4A40FD;
+}
+
 #about .skills-container {
   margin-top: 50px;
   display: -ms-grid;

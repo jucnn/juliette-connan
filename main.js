@@ -126,7 +126,7 @@ var app = new Vue({
         this.menuLinkActive = "home"
       } else if(this.windowTop > 400 && this.windowTop < 1700) {
         this.menuLinkActive = "works"
-      } else if(this.windowTop > 1700 && this.windowTop < 3000) {
+      } else if(this.windowTop > 1700 && this.windowTop < 3300) {
         this.menuLinkActive = "about"
       } else {
         this.menuLinkActive = "contact"

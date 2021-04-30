@@ -545,6 +545,21 @@ section {
     }
   }
 
+  .certifications-container {
+    margin-bottom: 60px;
+    h3 {
+      margin-bottom: 40px;
+    }
+    a {
+      color: $white;
+
+      &::after {
+        content:"";
+        background-color:$blue;
+      }
+    }
+  }
+
   .skills {
     &-container {
       margin-top: 50px;
@@ -572,6 +587,7 @@ section {
       }
     }
   }
+
 }
 
 /* Contact */
