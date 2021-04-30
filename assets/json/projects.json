@@ -24,7 +24,6 @@
     "imgs": [
       "./assets/img/projects/swapup/swapup_register.png",
       "./assets/img/projects/swapup/swapup_feed.png",
-      "./assets/img/projects/swapup/swapup_profile.png",
       "./assets/img/projects/swapup/swapup_swap.png",
       "./assets/img/projects/swapup/swapup_object.png"
     ],
@@ -48,8 +47,7 @@
     "imgs": [
       "./assets/img/projects/therapies-geniques-nvs/therapies_geniques_hp.png",
       "./assets/img/projects/therapies-geniques-nvs/therapies_geniques_tooltip.png",
-      "./assets/img/projects/therapies-geniques-nvs/therapies_geniques_quizz.png",
-      "./assets/img/projects/therapies-geniques-nvs/therapies_geniques_page.png"
+      "./assets/img/projects/therapies-geniques-nvs/therapies_geniques_quizz.png"
     ],
     "description": "Thérapies géniques et cellulaires is a Novartis (swiss pharmaceutical laboratory) website. I had to integrate Photoshop mock-up using Twig template inside Drupal 7",
     "type": "Work",

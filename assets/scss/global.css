@@ -405,6 +405,12 @@ section {
   height: 125%;
 }
 
+@media screen and (max-width: 1200px) {
+  .project-infos_container {
+    height: auto;
+  }
+}
+
 .project-container {
   border: 5px solid #403F3C;
   padding: 40px;
@@ -470,7 +476,8 @@ section {
 @media screen and (max-width: 1200px) {
   .project-imgs {
     position: inherit;
-    margin-top: 60px;
+    margin-top: 30px;
+    overflow-y: auto;
   }
 }
 
@@ -494,6 +501,7 @@ section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 30px;
   }
 }
 
